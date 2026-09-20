@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<!-- ═══════════════════════════════════════════════════════════
+     META PIXEL - cole o ID na Fase 6 (troque COLE_AQUI_PIXEL_ID)
+     PageView + ViewContent disparam aqui. InitiateCheckout dispara no clique dos botoes.
+     NAO dispare Purchase aqui - Purchase vem do checkout da Kiwify.
+     ═══════════════════════════════════════════════════════════ -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'COLE_AQUI_PIXEL_ID');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name:'Raio-X Comercial', content_type:'product', value:47, currency:'BRL'});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=COLE_AQUI_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Raio-X Comercial - descubra onde o seu comercial perde venda</title>
+<meta name="description" content="20 pontos de checagem, nota por area e 3 acoes datadas pra sua semana. Em uma tarde voce descobre onde o seu comercial esta perdendo venda.">
+<meta property="og:title" content="Raio-X Comercial">
+<meta property="og:description" content="Descubra em uma tarde onde o seu comercial esta perdendo venda.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://diagnostico.achetranquilo.com/">
+<meta property="og:image" content="https://diagnostico.achetranquilo.com/img/og.jpg">
+<style>
+  /* ═══ PALETA - troque so estas 8 cores pra mudar a cara da pagina ═══ */
+  :root{
+    --bg:#0a0f1e; --card:#121b30; --line:#22304a;
+    --gold:#f0c14b; --gold2:#c69a3a; --green:#28c76f; --red:#ff5c5c;
+    --txt:#f4f4f4; --mut:#9aa6bd;
+  }
+  :root{color-scheme:only light}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:0 22px}
+  .topbar{background:rgba(240,193,75,.08);color:var(--gold);text-align:center;font-weight:600;font-size:.72rem;letter-spacing:.6px;padding:8px 16px;text-transform:uppercase;border-bottom:1px solid rgba(240,193,75,.18)}
+  section{padding:48px 0;border-bottom:1px solid var(--line)}
+  h1,h2,h3{line-height:1.13;letter-spacing:-.5px}
+  h2{font-size:clamp(1.5rem,6vw,1.85rem);font-weight:800;margin-bottom:16px}
+  h3{font-size:1.15rem;font-weight:700;margin-bottom:6px}
+  p{margin-bottom:14px;color:#e6e6e6}
+  .mut{color:var(--mut)} .gold{color:var(--gold)} .center{text-align:center}
+  .eyebrow{display:inline-block;font-size:.76rem;letter-spacing:1.4px;font-weight:700;color:var(--gold);background:rgba(240,193,75,.1);border:1px solid rgba(240,193,75,.3);padding:7px 14px;border-radius:99px;text-transform:uppercase}
+  /* ═══ BOTAO CTA ═══ */
+  .cta{display:block;width:100%;text-align:center;background:linear-gradient(180deg,var(--gold),var(--gold2));color:#1a1300;font-weight:800;font-size:1.12rem;padding:19px 22px;border-radius:14px;text-decoration:none;margin:22px 0 6px;box-shadow:0 10px 30px rgba(240,193,75,.22);transition:transform .15s}
+  .cta:hover{transform:translateY(-2px)}
+  .cta-price{text-align:center;font-size:.9rem;color:var(--mut);margin-bottom:8px}
+  .cta-price b{color:var(--gold)}
+  /* ═══ HERO ═══ */
+  .hero{background:radial-gradient(130% 90% at 50% -10%,#15203c 0%,#0c1326 45%,var(--bg) 75%);text-align:center;padding-top:40px}
+  .hero h1{font-size:clamp(2.1rem,9vw,3.2rem);font-weight:900;letter-spacing:-1px;margin:14px 0 10px;background:linear-gradient(180deg,#fbe08a,var(--gold) 45%,var(--gold2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero .sub{font-size:clamp(1.1rem,5vw,1.5rem);color:#fff;font-weight:800;margin:10px auto;max-width:520px;line-height:1.25}
+  .hero .lead{font-size:clamp(1rem,4.4vw,1.15rem);max-width:480px;margin:14px auto 8px;color:#dfe5f0}
+  .negacoes{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+  .negacoes span{font-size:.78rem;color:#ddd;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:7px 13px}
+  /* ═══ DOR ═══ */
+  .pains{display:flex;flex-direction:column;gap:12px}
+  .pain-card{display:flex;gap:15px;align-items:center;background:linear-gradient(160deg,#2a1414,#190d0d);border:1px solid #4a2222;border-radius:14px;padding:16px 18px}
+  .pain-card .x{flex:0 0 auto;width:38px;height:38px;border-radius:10px;background:rgba(255,92,92,.12);border:1px solid rgba(255,92,92,.35);display:flex;align-items:center;justify-content:center;color:var(--red);font-size:1.25rem;font-weight:900}
+  .pain-card p{margin:0;color:#f1e3e3;font-weight:600;font-size:.98rem;line-height:1.35}
+  /* ═══ CONTA ═══ */
+  .conta{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:16px 0}
+  .conta div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .conta div:last-child{border-bottom:none;font-weight:800;color:var(--gold);font-size:1.05rem}
+  /* ═══ OBJECOES ═══ */
+  .obj{color:var(--mut);font-style:italic;border-left:3px solid var(--line);padding-left:14px;margin:8px 0}
+  .nego{background:var(--card);border:1px solid var(--gold2);border-radius:14px;padding:18px;font-weight:700;color:#fff;margin-top:16px}
+  /* ═══ CONTRASTE ═══ */
+  .paths{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .path{border-radius:14px;padding:18px;border:1px solid var(--line)}
+  .path.bad{background:linear-gradient(160deg,#211014,#180c0f);border-color:#4a2222}
+  .path.good{background:linear-gradient(160deg,#0f2018,#0b1712);border-color:#1e4433}
+  .path h3{font-size:1rem} .path ul{list-style:none;margin-top:10px}
+  .path li{padding:8px 0 8px 26px;position:relative;font-size:.92rem;color:#e6e6e6;border-bottom:1px solid rgba(255,255,255,.05)}
+  .path.bad li:before{content:"✕";position:absolute;left:0;color:var(--red);font-weight:800}
+  .path.good li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+  @media (max-width:520px){.paths{grid-template-columns:1fr}}
+  /* ═══ O QUE RECEBE ═══ */
+  .block-label{font-size:.8rem;letter-spacing:1.5px;font-weight:800;color:var(--gold);text-transform:uppercase;margin:28px 0 14px;display:flex;align-items:center;gap:10px}
+  .block-label:after{content:"";flex:1;height:1px;background:var(--line)}
+  .mod{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px}
+  .mod h3{font-size:1.02rem;font-weight:700;display:flex;align-items:flex-start;gap:10px}
+  .mod .n{flex:0 0 auto;width:28px;height:28px;border-radius:8px;font-size:.9rem;color:var(--gold);font-weight:800;background:rgba(240,193,75,.1);border:1px solid rgba(240,193,75,.3);display:inline-flex;align-items:center;justify-content:center}
+  .mod .time{font-size:.7rem;color:var(--gold);font-weight:700;background:rgba(240,193,75,.08);border:1px solid rgba(240,193,75,.25);border-radius:99px;padding:3px 9px;margin-left:auto;white-space:nowrap}
+  .mod .obj-in{font-size:.88rem;color:var(--mut);font-style:italic;margin:8px 0 0 38px}
+  .mod p{font-size:.92rem;color:#dfe5f0;margin:6px 0 0 38px}
+  /* ═══ STACK ═══ */
+  .stack-box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:8px 18px 16px}
+  .stack-box .row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.94rem}
+  .stack-box .row span:last-child{color:var(--gold);font-weight:700;white-space:nowrap}
+  .stack-total{display:flex;justify-content:space-between;padding-top:14px;font-weight:800;font-size:1.05rem}
+  .stack-total s{color:var(--mut);font-weight:600}
+  /* ═══ PRECO ═══ */
+  .offer{text-align:center;background:radial-gradient(120% 90% at 50% 0%,#15203c,var(--bg));border:1px solid var(--gold2);border-radius:20px;padding:30px 20px}
+  .offer .from{color:var(--mut);text-decoration:line-through;font-size:1.1rem}
+  .price{font-size:clamp(3rem,15vw,3.8rem);font-weight:900;color:var(--gold);line-height:1;margin:6px 0}
+  .price small{font-size:1.1rem;color:var(--mut);font-weight:600}
+  .offer .parc{color:#fff;font-weight:700;margin-bottom:6px}
+  /* ═══ GARANTIA ═══ */
+  .guarantee{display:flex;gap:16px;align-items:center;background:linear-gradient(160deg,#0f2018,#0b1712);border:1px solid #1e4433;border-radius:16px;padding:20px}
+  .guarantee .seal{flex:0 0 auto;width:60px;height:60px;border-radius:50%;background:rgba(40,199,111,.12);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:1.6rem}
+  /* ═══ FAQ ═══ */
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px 16px;margin-bottom:10px}
+  summary{cursor:pointer;padding:14px 0;font-weight:700;list-style:none;position:relative;padding-right:28px}
+  summary::-webkit-details-marker{display:none}
+  summary:after{content:"+";position:absolute;right:4px;color:var(--gold);font-size:1.3rem}
+  details[open] summary:after{content:"–"}
+  details p{padding-bottom:14px;margin:0;font-size:.94rem;color:var(--mut)}
+  /* ═══ BARRA FIXA ═══ */
+  .buybar{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--gold2);padding:10px 16px;display:none;align-items:center;gap:12px;z-index:50;box-shadow:0 -8px 30px rgba(0,0,0,.5)}
+  .buybar.show{display:flex}
+  .buybar .p{flex:1;font-size:.86rem} .buybar .p b{color:var(--gold);font-size:1.05rem}
+  .buybar a{background:linear-gradient(180deg,var(--gold),var(--gold2));color:#1a1300;font-weight:800;padding:12px 20px;border-radius:10px;text-decoration:none;white-space:nowrap}
+  footer{text-align:center;color:var(--mut);font-size:.76rem;padding:30px 22px 90px}
+</style>
+</head>
+<body>
+
+<div class="topbar">Pra dono de negócio que passa o dia no WhatsApp respondendo curioso</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Diagnóstico comercial</span>
+    <h1>Descubra em uma tarde onde o seu comercial perde venda</h1>
+    <p class="sub">20 pontos de checagem, nota por área e 3 ações datadas pra sua semana.</p>
+    <div class="negacoes"><span>Sem contratar ninguém</span><span>Sem trocar de sistema</span><span>Sem reunião</span></div>
+
+    <a class="cta" href="COLE_AQUI_CHECKOUT" onclick="fbq('track','InitiateCheckout',{value:47,currency:'BRL'})">Quero ver onde estou perdendo venda</a>
+    <p class="cta-price"><s>De R$197</s> por <b>R$47</b> · pagamento único</p>
+    <p class="lead">R$47 hoje. Menos do que você paga por um lead que não é atendido direito.</p>
+  </div>
+</section>
+
+<!-- ═══ A CONCESSÃO ═══ -->
+<section>
+  <div class="wrap">
+    <h2>A verdade é que tudo funciona...</h2>
+    <div class="pains">
+      <div class="pain-card"><div class="x">✕</div><p>Responder todo mundo em 2 minutos, você mesmo, todo santo dia. <b>Alguém vai comprar...</b></p></div>
+      <div class="pain-card"><div class="x">✕</div><p>Aumentar a verba do anúncio e encher mais o WhatsApp. <b>Alguém vai comprar...</b></p></div>
+      <div class="pain-card"><div class="x">✕</div><p>Dar 10% de desconto pra não perder o orçamento. <b>Alguém vai comprar...</b></p></div>
+      <div class="pain-card"><div class="x">✕</div><p>Contratar um vendedor e torcer pra ele ter jeito. <b>Alguém vai comprar...</b></p></div>
+    </div>
+    <p style="margin-top:18px"><b>Tudo isso funciona. E tudo isso custa o seu dia.</b></p>
+  </div>
+</section>
+
+<!-- ═══ O CUSTO ═══ -->
+<section>
+  <div class="wrap">
+    <h2>Ou você abriu o seu negócio pra passar a tarde respondendo "qual o valor?"</h2>
+    <p>É, eu também não. Por isso eu parei de fazer isso.</p>
+    <p>Faz a conta do seu mês:</p>
+    <div class="conta">
+      <div><span>Horas por dia no WhatsApp respondendo lead</span><span>3h</span></div>
+      <div><span>Dias úteis no mês</span><span>22</span></div>
+      <div><span>Total</span><span>66 horas</span></div>
+    </div>
+    <p>Oito dias inteiros de trabalho. E a parte que dói: a maior parte disso foi com gente que nunca ia comprar.</p>
+    <p><b>A questão não é só vender mais. É quanto do seu mês você paga pra vender.</b></p>
+    <a class="cta" href="COLE_AQUI_CHECKOUT" onclick="fbq('track','InitiateCheckout',{value:47,currency:'BRL'})">Quero saber onde estou perdendo · R$47</a>
+  </div>
+</section>
+
+<!-- ═══ OBJEÇÕES + NEGAÇÃO ═══ -->
+<section>
+  <div class="wrap">
+    <h2>Eu sei o que você está pensando</h2>
+    <p class="obj">"Mas ninguém atende o meu cliente melhor do que eu, né?"</p>
+    <p class="obj">"Se eu não responder na hora, o cara vai pro concorrente, não é?"</p>
+    <p class="obj">"E qualificar não vai espantar quem ia comprar?"</p>
+    <p>Eu passei 5 anos gerenciando tráfego pago e 3 anos fechando venda no WhatsApp todo dia. Vi os dois lados da conta: o dinheiro entrando pra gerar lead e o lead morrendo na conversa.</p>
+    <div class="nego">Não, você não precisa de um time novo, nem de outro sistema, tampouco de mais verba no anúncio.</div>
+    <p style="margin-top:16px">Você precisa saber em qual dos quatro pontos o seu comercial está furando. Porque é sempre um, e quase nunca é o que o dono acha que é.</p>
+  </div>
+</section>
+
+<!-- ═══ CONTRASTE ═══ -->
+<section>
+  <div class="wrap">
+    <h2>O jeito caro e o Raio-X</h2>
+    <div class="paths">
+      <div class="path bad"><h3>✕ O jeito caro</h3><ul>
+        <li>Contratar consultor e pagar milhares pra descobrir o problema</li>
+        <li>Trocar de CRM achando que a ferramenta resolve</li>
+        <li>Fazer um curso de 12 horas e não aplicar nada</li>
+        <li>Contratar vendedor sem saber onde está o furo</li>
+        <li>Colocar mais verba num funil que vaza</li>
+      </ul></div>
+      <div class="path good"><h3>✓ O Raio-X Comercial</h3><ul>
+        <li>Você mede as 4 áreas do seu comercial</li>
+        <li>Recebe uma nota de 0 a 10 em cada uma</li>
+        <li>Vê qual delas está furando o caixa</li>
+        <li>Sai com 3 ações datadas</li>
+        <li>Executa nesta semana, sozinho</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ O QUE VOCÊ RECEBE ═══ -->
+<section>
+  <div class="wrap">
+    <h2>O que você recebe</h2>
+
+    <div class="block-label">📋 Parte 1 · O mapa</div>
+    <div class="mod"><h3><span class="n">1</span><span>Checklist de 20 pontos</span><span class="time">⏱ 25 min</span></h3><p class="obj-in">"Eu já sei o que está errado no meu comercial."</p><p>Saber não é medir. Os 20 pontos cobrem captação, primeiro atendimento, qualificação e follow-up. Você vai errar o palpite em pelo menos um.</p></div>
+    <div class="mod"><h3><span class="n">2</span><span>Planilha com nota automática</span><span class="time">já vem pronta</span></h3><p class="obj-in">"Vai dar trabalho montar isso."</p><p>Você marca sim ou não, ela calcula a nota de cada área sozinha.</p></div>
+
+    <div class="block-label">📊 Parte 2 · A leitura</div>
+    <div class="mod"><h3><span class="n">3</span><span>Leitura do resultado</span><span class="time">⏱ 10 min</span></h3><p class="obj-in">"E se eu tirar nota baixa em tudo?"</p><p>Então você descobriu por que o mês está apertado. A leitura mostra qual furo tapar primeiro, porque tapar todos ao mesmo tempo não dá.</p></div>
+    <div class="mod"><h3><span class="n">4</span><span>O custo de cada furo</span><span class="time">incluído</span></h3><p class="obj-in">"Tá, e daí?"</p><p>Cada área tem uma conta do que ela custa por mês em venda que não fecha. Sai do achismo.</p></div>
+
+    <div class="block-label">🎯 Parte 3 · A ação</div>
+    <div class="mod"><h3><span class="n">5</span><span>Plano de 3 ações datadas</span><span class="time">⏱ 15 min</span></h3><p class="obj-in">"Não tenho tempo de aplicar."</p><p>São 3 ações, uma na segunda, uma na quarta, uma na sexta. Cerca de 40 minutos cada.</p></div>
+    <div class="mod"><h3><span class="n">6</span><span>Aula de condução</span><span class="time">⏱ 35 min</span></h3><p class="obj-in">"Prefiro que alguém conduza comigo."</p><p>Você abre a planilha e faz junto comigo, ponto a ponto.</p></div>
+
+    <p style="margin-top:18px"><b>Tempo total: 1 hora e 25 minutos.</b> Em uma tarde você termina o diagnóstico inteiro e sai com a semana já definida.</p>
+
+    <a class="cta" href="COLE_AQUI_CHECKOUT" onclick="fbq('track','InitiateCheckout',{value:47,currency:'BRL'})">Quero o Raio-X Comercial · R$47</a>
+  </div>
+</section>
+
+<!-- ═══ STACK ═══ -->
+<section>
+  <div class="wrap">
+    <h2>Some tudo:</h2>
+    <div class="stack-box">
+      <div class="row"><span>Checklist de 20 pontos</span><span>R$97</span></div>
+      <div class="row"><span>Planilha com nota automática</span><span>R$50</span></div>
+      <div class="row"><span>Aula de condução de 35 minutos</span><span>R$50</span></div>
+      <div class="stack-total"><span>Valor total</span><span><s>R$197</s></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ É PRA VOCÊ / NÃO É ═══ -->
+<section>
+  <div class="wrap">
+    <div class="paths">
+      <div class="path good"><h3>✓ É pra você se...</h3><ul>
+        <li>Você é dono e ainda responde lead pessoalmente</li>
+        <li>Você investe em anúncio e sente que o retorno não bate com o volume de conversa</li>
+        <li>Você quer saber onde está o furo antes de contratar alguém</li>
+        <li>Você topa executar 3 ações nesta semana</li>
+      </ul></div>
+      <div class="path bad"><h3>✕ Não é se...</h3><ul>
+        <li>Você quer alguém pra fazer no seu lugar (aqui você faz)</li>
+        <li>Você não tem lead chegando ainda (o problema é outro)</li>
+        <li>Você quer garantia de faturamento</li>
+        <li>Você não vai abrir a planilha</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PREÇO ═══ -->
+<section id="oferta">
+  <div class="wrap">
+    <h2 class="center">Uma tarde sua vale mais que R$47</h2>
+    <div class="offer">
+      <p class="from">De R$197</p>
+      <div class="price">R$47</div>
+      <p class="parc">pagamento único · acesso imediato</p>
+      <a class="cta" href="COLE_AQUI_CHECKOUT" onclick="fbq('track','InitiateCheckout',{value:47,currency:'BRL'})">Fazer o meu Raio-X agora</a>
+      <p class="mut" style="font-size:.82rem">As 4 áreas medidas, a nota de cada uma, o furo identificado e 3 ações com data pra executar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GARANTIA ═══ -->
+<section>
+  <div class="wrap">
+    <div class="guarantee">
+      <div class="seal">🛡️</div>
+      <div><h3>A lei exige 7 dias. Eu te dou 30.</h3><p style="margin:6px 0 0">Faz o diagnóstico inteiro, executa as 3 ações e, se achar que não te mostrou nada que você já não soubesse, pede o dinheiro de volta. Sem formulário, sem pergunta. Você arrisca R$47 por 30 dias pra descobrir o que está custando 66 horas do seu mês.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DÚVIDAS COMUNS ═══ -->
+<section>
+  <div class="wrap">
+    <h2>Dúvidas comuns:</h2>
+    <details><summary>"Por que R$47 e não R$197?"</summary><p>Porque eu quero os primeiros casos. Quem entra agora entra pra virar exemplo. Quando eu tiver resultados registrados pra mostrar, volta pro preço cheio.</p></details>
+    <details><summary>"Isso é só mais um PDF?"</summary><p>Tem planilha que calcula, aula que conduz e plano com data. O que você faz depois é com você, mas sair daqui sem saber o que fazer na segunda é difícil.</p></details>
+    <details><summary>"Eu já uso CRM, ainda serve?"</summary><p>Serve, e costuma doer mais. Ter a ferramenta e não ter o processo é justamente um dos 20 pontos.</p></details>
+    <details><summary>"Não tenho tempo essa semana."</summary><p>São 1h25 uma vez. Você gasta mais que isso no WhatsApp até a quarta.</p></details>
+    <details><summary>"Serve pro meu tipo de negócio?"</summary><p>Se você vende serviço e recebe lead por WhatsApp, serve. Clínica, escritório, estúdio, prestador, agência. Os 20 pontos são do processo comercial, não do seu mercado.</p></details>
+  </div>
+</section>
+
+<!-- ═══ FECHO ═══ -->
+<section style="border-bottom:none">
+  <div class="wrap center">
+    <h2>Você tem dois caminhos a partir daqui</h2>
+    <p>Continuar respondendo curioso e descobrir em dezembro por que o ano não fechou.</p>
+    <p>Ou gastar uma tarde e saber exatamente onde o dinheiro está vazando.</p>
+    <a class="cta" href="COLE_AQUI_CHECKOUT" onclick="fbq('track','InitiateCheckout',{value:47,currency:'BRL'})">Quero o Raio-X Comercial · R$47</a>
+    <p class="cta-price"><s>R$197</s> · hoje <b>R$47</b> · acesso imediato · 30 dias de garantia</p>
+  </div>
+</section>
+
+<footer>
+  Ache Tranquilo · Este produto não garante resultados. Resultados dependem de aplicação.
+</footer>
+
+<!-- ═══ BARRA FIXA DE COMPRA ═══ -->
+<div class="buybar" id="buybar">
+  <div class="p">Raio-X Comercial<br><b>R$47</b></div>
+  <a href="COLE_AQUI_CHECKOUT" onclick="fbq('track','InitiateCheckout',{value:47,currency:'BRL'})">Quero o meu</a>
+</div>
+<script>
+  addEventListener('scroll',function(){
+    document.getElementById('buybar').classList.toggle('show', scrollY > 700);
+  },{passive:true});
+</script>
+
+</body>
+</html>
